@@ -18,6 +18,14 @@ conjunction with [`ENTRYPOINT`](../../engine/reference/builder.md#entrypoint), u
 you and your expected users are already quite familiar with how `ENTRYPOINT`
 works.
 
+คำสั่ง CMD ใช้สำหรับการรันซอฟต์แวร์ที่ถูกเก็บไว้ใน image วิธีการใช้ เช่น CMD ["executable", "param1", "param2"…] ยกตัวอย่าง ถ้า image นั้นใช้สำหรับ service เช่น Apache และ Rails 
+เราก็จะใช้คำสั่ง CMD คือ CMD ["apache2","-DFOREGROUND"] 
+
+ในกรณีทั่วๆไป CMD สามารถใช้ใน shell อื่นๆได้ เช่น bash,python และ perl 
+โดยการใช้คำสั่งอย่างเช่น docker run -it python จะทำให้เปิด shell ที่ใช้งานได้ขึ้นมา 
+นานๆครั้งจะมีการใช้งาน CMD ในรูปแบบของ CMD ["param", "param"] 
+
+
 ### EXPOSE
 
 [Dockerfile reference for the EXPOSE instruction](../../engine/reference/builder.md#expose)
